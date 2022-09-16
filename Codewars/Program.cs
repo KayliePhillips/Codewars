@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Codewars;
+
+Console.WriteLine(Methods.basicOp('+', 4, 3));
