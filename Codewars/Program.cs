@@ -25,9 +25,49 @@ using System;
 #endregion
 
 #region Codewars: Opposites Attract --Pick flowers peters to determine love
-Console.WriteLine(Methods.lovefunc(0,0));
-Console.WriteLine(Methods.lovefunc(2, 2));
-Console.WriteLine(Methods.lovefunc(3, 2));
+//Console.WriteLine(Methods.lovefunc(0,0));
+//Console.WriteLine(Methods.lovefunc(2, 2));
+//Console.WriteLine(Methods.lovefunc(3, 2));
+#endregion
+
+#region Codewars: If you Can 't sleep, just count sheep!! -- Enter a number and return a string. 
+//Console.WriteLine(Methods.CountSheep(3));
+#endregion
+
+#region Codewars: Convert boolean values to strings 'Yes' or 'No'
+//Console.WriteLine(Methods.boolToWord(false));
+#endregion
+
+#region Codewars: GetPlanetName - debug Switch Statement
+//Console.WriteLine(Methods.GetPlanetName(2));
+#endregion
+
+#region Codewars: CorrectTail debugging
+//Console.WriteLine(Methods.CorrectTail("Fox", 'x'));
+#endregion
+
+#region Codewars: Jenny's secret message
+//Console.WriteLine(Methods.greet("Johnny"));
+#endregion
+
+#region Codewars: 101 Dalmations-squash the bugs, not the dogs!
+//Console.WriteLine(Methods.HowManyDalmatians(8));
+#endregion
+
+#region Codewars: The Wide-Mouthed frog!
+//Console.WriteLine(Methods.MouthSize("alligator"));
+//Console.WriteLine(Methods.MouthSize("Ant Bear"));
+#endregion
+
+#region Codewars: Grasshopper-Grade book
+//Console.WriteLine(Methods.GetGrade(95, 90, 93));
+#endregion
+
+#region Codewars: Simple multiplication
+
+//Console.WriteLine(Methods.Multiply(5));
 #endregion
 
 #endregion All of Completed Codewars
+
+
