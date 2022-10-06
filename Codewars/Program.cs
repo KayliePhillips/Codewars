@@ -68,6 +68,21 @@ using System;
 //Console.WriteLine(Methods.Multiply(5));
 #endregion
 
+#region Codewars: Calculate BMI
+//Console.WriteLine(Methods.Bmi(80, 1.80));
+#endregion
+
+#region Codewars: String Templates-Bug Fixing #5
+//Console.WriteLine(Methods.Arr(4));
+#endregion
+
+#region Codewars: For UFC Fans(Total Beginners)
+//Console.WriteLine(Methods.Quote("Conor mcgregor"));
+#endregion
+
+
+Console.WriteLine(Methods.IsEven(2));
+
 #endregion All of Completed Codewars
 
 

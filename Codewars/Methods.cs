@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Dataflow;
 
 namespace Codewars
 {
@@ -147,7 +151,7 @@ namespace Codewars
             return sheepCount;
         }
         #endregion
-            
+
         #region Codewars: Convert boolean values to strings 'Yes' or 'No'
         public static string boolToWord(bool word)
         {
@@ -200,7 +204,7 @@ namespace Codewars
         }
         //return name;
         #endregion
-        
+
         #region Codewars: CorrectTail debugging
         public static bool CorrectTail(string body, string tail)
         {
@@ -208,22 +212,22 @@ namespace Codewars
 
             char last_body = body[body.Length - 1];
             char last_tail = tail[tail.Length - 1];
-            
-                if (last_body == last_tail)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+
+            if (last_body == last_tail)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         #endregion
 
         #region Codewars: Jenny's secret message
         public static string greet(string name)
         {
-           // return "Hello, " + name + "!";
+            // return "Hello, " + name + "!";
             if (name == "Johnny")
             {
                 return "Hello, my love!";
@@ -245,22 +249,22 @@ namespace Codewars
                 "Woah that's a lot of dogs!",
                 "101 DALMATIONS!!!"
             };
-                if (n <= 10)
-                {
-                    return dogs[0];
-                }
-                else if (n <= 50)
-                {
-                    return dogs[1];
-                }
-                else if (n == 101)
-                {
-                    return dogs[3];
-                }
-                else
-                {
-                    return dogs[2];
-                }
+            if (n <= 10)
+            {
+                return dogs[0];
+            }
+            else if (n <= 50)
+            {
+                return dogs[1];
+            }
+            else if (n == 101)
+            {
+                return dogs[3];
+            }
+            else
+            {
+                return dogs[2];
+            }
 
         }
         #endregion
@@ -285,7 +289,7 @@ namespace Codewars
         public static string MouthSize(string animal)
         {
             animal = animal.ToLower();
-            if (animal == "alligator") 
+            if (animal == "alligator")
                 return "small";
             else
                 return "wide";
@@ -308,10 +312,9 @@ namespace Codewars
                 return 'D';
             else
                 return 'F';
-            
+
         }
         #endregion
-
 
         #region Codewars: Simple multiplication
         public static int Multiply(int x)
@@ -324,18 +327,184 @@ namespace Codewars
 
         #endregion
 
+        #region Codewars: Find the first non-consecutive number
+        public static object FirstNonConsecutive(int[] arr)
+        {
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                if (arr[i] + 1 != arr[i + 1])
+                {
+                    return arr[i + 1];
+                }
+            }
+            return null;
+        }
+        #endregion
 
+        #region Codewars: Sum of positive with Linq
+        public static int PositiveSum(int[] arr)
+        {
+            var posSum = arr.Where(x => x > 0).Sum(x => x);
+            return posSum;
+        }
+        #endregion
 
+        #region Codewars: Calculate BMI
+        public static string Bmi(double weight, double height)
+        {
+            var bmi = (weight / (height * height));
+
+            if (bmi <= 18.5)
+            {
+                return "Underweight";
+            }
+            else if (bmi <= 25.0)
+            {
+                return "Normal";
+            }
+            else if (bmi <= 30.0)
+            {
+                return "Overweight";
+            }
+            else
+            {
+                return "Obese";
+            }
+
+        }
+        #endregion
+
+        #region Codewars: String Templates-Bug Fixing #5
+        public static string buildString(string[] args)
+        {
+            return string.Format("I like {0}!", string.Join(", ", args));
+
+        }
+        #endregion
+
+        #region Codewars: Man in the west -- Gold checker T/F
+        public static bool CheckTheBucket(string[] bucket)
+        {
+            foreach (var item in bucket)
+            {
+                if (item == "gold")
+                {
+                    return true;
+                }
+
+            }
+            return false;
+        }
+
+        #endregion
+
+        #region Codewars: For UFC Fans(Total Beginners)
+        public static string Quote(string fighter)
+        {
+
+            if (fighter.ToLower() == "conor mcgregor")
+            {
+                return ("I'd like to take this chance to apologize.. To absolutely NOBODY!");
+            }
+            else
+            {
+                return ("I am not impressed by your performance.");
+            }
+        }
+        #endregion
+
+        #region Codewars: You only need one -- Beginner
+        public static bool Check(object[] a, object x)
+        {
+            return a.Contains(x);
+        }
+        #endregion;
+
+        #region Codewars: Remove First and Last Character
+        public static string Remove_char(string s)
+        {
+            string result = s.Substring(1, s.Length - 2);
+            return result;
+
+        }
+        #endregion
+
+        #region Codewars: Reverse List
+        public static int[] reverseList(int[] list)
+        {
+            return list.Reverse().ToArray();
+        }
+        #endregion
+
+        #region Codewars: The Feast of Many Beasts
+        public static bool Feast(string beast, string dish)
+        {
+            char[] wordBeast = beast.ToLower().ToCharArray();
+            char[] wordDish = dish.ToLower().ToCharArray();
+
+            if (wordBeast[0] == wordDish[0] && wordBeast[beast.Length -1] == wordDish[dish.Length-1])
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region Codewars: Counting sheep True or False
+        public static int CountSheeps(bool[] sheeps)
+        {
+            int x = 0;
+            foreach (var item in sheeps)
+            {
+                if (item == true)
+                {
+                    x++;
+                }
+            }
+            return x;
+        }
+        #endregion
+
+        #region Codewars: Switch/Case-Bug Fixing #6
+        public static double EvalObject(double value1, double value2, char operation)
+        {
+            double result = 0;
+            switch (operation)
+            {
+                case '+': return value1 + value2;
+                case '-': return value1 - value2;
+                case '/': return value1 / value2;
+                case '*': return value1 * value2;
+                case '%': return value1 % value2;
+                case '^': return Math.Pow(value1, value2);
+                default: return 0;
+
+            }
+            
+        }
+        #endregion
+
+        #region Codewars: Reversed Strings
+        public static string Solution(string str)
+        {
+        return string.Join("", str.Reverse());
+            
+        }
+        #endregion
 
         #endregion All Completed Codewars Methods
 
-
-
-
     }
 
-
 }
+
+
+
+
+
 
 
 
