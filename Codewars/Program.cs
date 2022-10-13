@@ -80,9 +80,12 @@ using System;
 //Console.WriteLine(Methods.Quote("Conor mcgregor"));
 #endregion
 
+#region Codewars: Transportation on Vacation
+//Console.WriteLine(Methods.RentalCarCost(3));
+#endregion
 
-Console.WriteLine(Methods.IsEven(2));
 
+Console.WriteLine(Methods.HighAndLow("1 2 3 4 5 -5 33"));
 #endregion All of Completed Codewars
 
 

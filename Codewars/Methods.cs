@@ -5,8 +5,10 @@ using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection.Metadata.Ecma335;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 
@@ -494,6 +496,68 @@ namespace Codewars
             
         }
         #endregion
+
+        #region Codewars: Transportation on Vacation
+        public static int RentalCarCost(int d)
+        {
+            
+            if (d>=7)
+            {
+                return (40 * d) - 50;
+            }
+            else if (3 <= d && d < 7)
+            {
+                return (40 * d) - 20;
+            }
+            return (d * 40);
+        }
+        #endregion
+
+        #region Codewars: Beginner - Lost Without a Map
+        public static int[] Maps(int[] x)
+        {
+            int[] y = new int[x.Length];
+            for (int i = 0; i < x.Length; i++)
+            {
+                y[i] = x[i] * 2;
+            }
+            return y;
+        }
+        #endregion
+
+        #region All Star Code Challenge #18
+        public static int StrCount(string str, string letter)
+        {
+            
+
+            char[] wordString = str.ToLower().ToCharArray();
+            char[] givenLetter = letter.ToLower().ToCharArray();
+
+            var countAnswer = 0;
+            for (int i = 0; i < wordString.Length; i++)
+            {
+
+                if (wordString[i] == givenLetter[0])
+                {
+                    countAnswer++;
+                }
+               
+            }
+            return countAnswer;
+        }
+        #endregion
+
+        #region Codeswars: Highest and Lowest
+        public static string HighAndLow(string numbers)
+        {
+            var max = numbers.Split(' ').Select(x => int.Parse(x)).Max();
+            int min = numbers.Split(' ').Select(x => int.Parse(x)).Min();
+            var answer = ($"{max} {min}");
+            return answer;
+        }
+        #endregion
+
+
 
         #endregion All Completed Codewars Methods
 
