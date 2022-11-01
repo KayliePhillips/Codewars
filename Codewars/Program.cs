@@ -1,5 +1,6 @@
 ﻿using Codewars;
 using System;
+using System.Linq.Expressions;
 
 #region All Completed Codewars 
 
@@ -84,8 +85,59 @@ using System;
 //Console.WriteLine(Methods.RentalCarCost(3));
 #endregion
 
+#region Codewars: Highest and Lowest
+//Console.WriteLine(Methods.HighAndLow("1 2 3 4 5 -5 33"));
+#endregion
 
-Console.WriteLine(Methods.HighAndLow("1 2 3 4 5 -5 33"));
+#region Codewars: Sorted?yes?no?how?  === didn't finish
+//Console.WriteLine(Methods.IsSortedAndHow(new[] {1,2,3,4,5}));
+//Console.WriteLine(Methods.IsSortedAndHow(new[] { 10,9,8,7,5 }));
+//Console.WriteLine(Methods.IsSortedAndHow(new[] { 1, 12, 3, 94, 5 }));
+#endregion
+
+#region Codewars: DNA to RNA Conversion
+//Console.WriteLine(Methods.dnaToRna("GCAT"));
+#endregion
+
+#region Codewars: Contamination #1-String
+//Console.WriteLine(Methods.Contamination("abc", "z"));
+#endregion
+
+#region Codewars: Vowel Remover
+//Console.WriteLine(Methods.Shortcut("Hello"));
+#endregion;
+
+#region Codewars: Sum of differences in array
+//var arr = new int[] { 25, 24, -25, 2 };
+//Console.WriteLine(Methods.SumOfDifferences(arr));
+#endregion
+
+//Console.WriteLine(Methods.numberToPower(2,3));
+
+#region Codewars:Reversed Words
+//Console.WriteLine(Methods.ReverseWords("The greatest victory"));
+#endregion
+
+#region Codewars: Disemvowel Trolls
+//Console.WriteLine(Methods.Disemvowel("No offense but, \nYour writing is among the worse I've ever read"));
+#endregion
+
+#region Codewars: Predict your age! 
+public class Predicter
+{
+    public static int PredictAge(int age1, int age2, int age3, int age4, int age5, int age6, int age7, int age8)
+    {
+        int x = ((age1 * age1) + (age2 * age2) + (age3 * age3) + (age4 * age4) + (age5 * age5) + (age6 * age6) + (age7 * age7) + (age8 * age8));
+
+        var z = (Math.Sqrt(x) / 2);
+
+        z = Math.Floor(z);
+
+        return Convert.ToInt32(z);    
+    }
+}
+#endregion
+
 #endregion All of Completed Codewars
 
 

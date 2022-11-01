@@ -525,7 +525,7 @@ namespace Codewars
         }
         #endregion
 
-        #region All Star Code Challenge #18
+        #region Codewars: All Star Code Challenge #18
         public static int StrCount(string str, string letter)
         {
             
@@ -547,7 +547,7 @@ namespace Codewars
         }
         #endregion
 
-        #region Codeswars: Highest and Lowest
+        #region Codewars: Highest and Lowest
         public static string HighAndLow(string numbers)
         {
             var max = numbers.Split(' ').Select(x => int.Parse(x)).Max();
@@ -557,6 +557,187 @@ namespace Codewars
         }
         #endregion
 
+        #region Codewars: Removing Elements
+        public static object[] RemoveEveryOther(object[] arr)
+        {
+            var keepValue = new List<object>();
+            
+            for (int i = 0; i < arr.Length; i+=2)
+            {
+                keepValue.Add(arr[i]);
+            }
+            return keepValue.ToArray();
+        }
+        #endregion
+
+        #region Codewars: Sorted?yes?no?how?  === didn't finish
+        public static string IsSortedAndHow(int[] array)
+        {
+
+            //I need to look though each element in the array so I need to have an if statement if [0]<[1] && [1]<[2].
+            //Then use a foreach loop to look throug the rest using what I already wrote
+            for (int i = 0; i < array.Length-1; i++)
+            {
+                if (array[i] < array[++i])
+                {
+                    return "yes, ascending";
+                }
+                else if (array[i] > array[++i])
+                {
+                    return "yes, descending";
+                }
+                else
+                {
+                    return "no";
+                }
+            }
+            return "";
+        }
+        #endregion
+
+        #region Codewars: DNA to RNA Conversion
+        public static string dnaToRna(string dna)
+        {
+            dna = dna.Replace("T", "U");
+            return dna;
+        }
+        #endregion
+
+        #region Codewars: Remove duplicates from list
+        public static int[] distinct(int[] a)
+        {
+            var keepValue = new List<int>();
+            
+
+            foreach (var item in a)
+            {
+                if (!keepValue.Contains(item))
+                {
+                    keepValue.Add(item);
+                }
+            }
+            return keepValue.ToArray();
+        }
+        #endregion
+
+        #region Codewars: Contamination #1-String
+        public static string Contamination(string text, string character)
+        {
+            var words = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                words+= character;
+               
+            }
+            return words;
+        }
+        #endregion
+
+        #region Codewars: Vowel Remover
+        public static string Shortcut(string input)
+        {
+            return input.Replace("a", "")
+                        .Replace("e", "")
+                        .Replace("i", "")
+                        .Replace("o", "")
+                        .Replace("u", "");
+        }
+        #endregion
+
+        #region Codewars: Sum of differences in array
+        public static int SumOfDifferences(int[] arr)
+        {
+            if (arr.Length <= 1) 
+            { 
+            return 0;
+            
+            }
+
+            var descArray = arr.OrderByDescending(x => x).ToArray();
+
+            var sum = 0;
+            for (int i = 0; i < descArray.Length-1; i++)
+            {
+               sum += descArray[i] - descArray[i+1];
+            }
+
+            return sum;
+
+        }
+        #endregion
+
+        #region Codewars: Convert an array of string to array of numbers
+        public static double[] ToDoubleArray(string[] stringArray)
+        {
+            double[] arr = new double[stringArray.Length];
+            for (int i = 0; i < stringArray.Length; i++)
+            {
+                arr[i] = Double.Parse(stringArray[i]);
+            }
+            return arr;
+        }
+        #endregion
+
+        #region Codewars:Reversed Words
+        //public static string ReverseWords(string str)
+        //{
+        //    string[] a = str.Split(' ');
+        //    Array.Reverse(a);
+
+
+        //    string[] b = new string[a.Length];
+        //    for (int i = 0; i < a.Length-1; i++)
+        //    {
+        //        b = (a[i] + "" + ' ');
+        //    }
+        //    return b.ToString;
+        //}
+        #endregion
+
+        #region Codewars: Area or Perimter
+        public static int AreaOrPerimeter(int l, int w)
+        {
+            if (l == w)
+            {
+                return l * w;
+            }
+            else
+            {
+                return ((l*2)+(w*2));   
+            }
+        }
+        #endregion
+
+        #region Codewars: Disemvowel Trolls
+        public static string Disemvowel(string str)
+        {
+            return str.Replace("a", "").Replace("e", "").Replace("i", "").Replace("o", "").Replace("u", "")
+               .Replace("A", "").Replace("E", "").Replace("I", "").Replace("O", "").Replace("U", "");
+            
+        }
+        #endregion
+
+        #region Codewars: The Coupon Code
+        public static class Kata
+        {
+            public static bool CheckCoupon(string enteredCode, string correctCode, string currentDate, string expirationDate)
+            {
+                var parsedCurrentDate = DateTime.Parse(currentDate);
+                var parsedExpirationDate = DateTime.Parse(expirationDate);
+
+                if (parsedCurrentDate > parsedExpirationDate && enteredCode == correctCode)
+                {
+                    return true;
+                }
+                else
+                {
+
+                }
+                return false;
+            }
+        }
+
+        #endregion
 
 
         #endregion All Completed Codewars Methods
